@@ -1,0 +1,19 @@
+.block__form{
+  margin: 80px 0;
+}
+.form{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  width: 800px;
+  margin: 0 auto;
+}
+.checkbox{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.checkbox__input{
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Graphik LCG"; 
+  src: url("./assets/fonts/GraphikLCG-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: 400; 
+} 
+@font-face {
+  font-family: "Graphik LCG"; 
+  src: url("./assets/fonts/GraphikLCG-Medium.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: 600; 
+} 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Graphik LCG", serif;
+}
+.container{
+  max-width: 1184px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.title{
+  margin-bottom: 61px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 140%;
+  text-align: center;
+  color: #191c1f;
+}
+.swiper__container{
+  position: relative;
+}
+.swiper{
+  padding-bottom: 50px !important;
+}
+.swiper-slide{
+  width: 200px;
+}
+.swiper-button-left,
+.swiper-button-right{
+  position: absolute;
+  cursor: pointer;
+}
+.swiper-button-left:hover.swiper-button-left svg path,
+.swiper-button-right:hover.swiper-button-right svg path{
+  fill: #2A6CEA;
+}
+.swiper-button-left{
+  left:-60px;
+  top: 40%;
+}
+.swiper-button-right{
+  right:-60px;
+  top: 40%;
+}

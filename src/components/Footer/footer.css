@@ -1,0 +1,12 @@
+footer{
+  display: flex;
+  justify-content: center;
+  padding: 27px;
+  border-top: 1px solid #F6F8FA;
+}
+.copyright{
+  font-size: 18px;
+  line-height: 178%;
+  text-align: center;
+  color: #191c1f;
+}
