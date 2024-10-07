@@ -2,11 +2,11 @@ footer{
   display: flex;
   justify-content: center;
   padding: 27px;
-  border-top: 1px solid #F6F8FA;
+  border-top: 1px solid var(--color-100-grey);
 }
 .copyright{
   font-size: 18px;
   line-height: 178%;
   text-align: center;
-  color: #191c1f;
+  color: var(--color-dark-grey);
 }

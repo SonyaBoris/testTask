@@ -5,6 +5,7 @@
   height: 960px;
   background-image: url(../../assets/images/backgound.png);
   background-position: center;
+  background-size: cover;
 }
 .start__content{
   display: flex;
@@ -12,11 +13,39 @@
   align-items: center;
   text-align: center;
   color: #fff;
-  width: 748px;
+  max-width: 748px;
 }
 .start__content-title{
+  font-size: 52px;
   margin-bottom: 18px;
 }
 .start__content-desc{
   margin-bottom: 92px;
+}
+@media (max-width: 768px){
+  .start{
+    height: 1024px;
+  }
+  .start__content-title{
+    font-size: 32px;
+  }
+  .start__content-desc{
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 375px){
+  .start{
+    height: 596px;
+  }
+  .start__content{
+    max-width: 288px;
+  }
+  .start__content-title{
+    font-size: 24px;
+  }
+}
+@media (max-width: 320px){
+  .start{
+    height: 509px;
+  }
 }

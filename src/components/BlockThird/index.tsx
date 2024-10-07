@@ -15,7 +15,7 @@ const BlockThird = () => {
           </p>
           <p className="third-text"> Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах.</p>
         </div>
-        <img src={THIRD} alt="Мужчина с грузовиком и телефоном" />
+        <img className="third-img" src={THIRD} alt="Мужчина с грузовиком и телефоном" />
       </div>
       <Reviews />
     </section>

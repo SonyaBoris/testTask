@@ -4,7 +4,7 @@
 .work__actions{
   margin-bottom: 80px;
   display: grid;
-  grid-template-columns: repeat(4,280px);
+  grid-template-columns: repeat(4,1fr);
   gap: 32px;
 }
 .card{
@@ -18,10 +18,28 @@
 .card__text{
   font-weight: 600;
   line-height: 150%;
-  color: #191c1f;
+  color: var(--color-dark-grey);
 }
 .card__desc{
   line-height: 171%;
-  color: #5e646a;
+  color: var(--color-500-grey);
   font-size: 14px;
+}
+@media (max-width: 980px){
+  .work__actions{
+    margin-bottom: 55px;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width: 600px){
+  .work__actions{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .card{
+    flex-direction: row;
+    gap: 16px;
+  }
+  .work {
+    padding-top: 56px;
+  }
 }

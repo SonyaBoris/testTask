@@ -1,9 +1,16 @@
 import LOGO from "../../assets/images/logo.png"
 import { Link } from 'react-scroll';
 import "./header.css"
+import { useState } from "react";
+import Burger from "./Burger";
 
 const Header = () => {
 
+  const [burger, setBurger] = useState(false)
+
+  const handleClick = () => {
+    setBurger(!burger)
+  }
   return (
     <header>
       <div className="container header">
@@ -14,10 +21,20 @@ const Header = () => {
           smooth={true}
           offset={50}
           duration={500}
+          onClick={handleClick}
         >
-          <img src={LOGO} alt="логотип компании" />
+          <div className="logo">
+            <img className="logo__img" src={LOGO} alt="логотип компании" />
+            <span className={burger ? "logo__black" : "logo__white"}>testLab</span>
+          </div>
         </Link>
-        <nav className="header__nav">
+        <div onClick={handleClick} className={burger ? "burger__open" : "burger__close"}>
+          <span className="burger"></span>
+        </div>
+        {
+          burger && <Burger handleClick={handleClick} />
+        }
+        <nav className="header__nav" >
           <Link
             className="header__nav-link"
             activeClass="active"

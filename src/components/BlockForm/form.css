@@ -9,6 +9,7 @@
   margin: 0 auto;
 }
 .checkbox{
+  position: relative;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -16,4 +17,27 @@
 .checkbox__input{
   width: 24px;
   height: 24px;
+}
+.desc__error{
+  position: absolute;
+  bottom: 0;
+}
+.desc__error-checkbox{
+  position: absolute;
+  bottom: -10px;
+  left: 40px;
+  color: var(--color-red);
+}
+@media (max-width: 870px){
+  .block__form {
+    margin: 57px 0;
+}
+  .form{
+    width: 100%;
+  }
+}
+@media (max-width: 520px){
+  .form{
+    grid-template-columns: repeat(1,1fr);
+  }
 }

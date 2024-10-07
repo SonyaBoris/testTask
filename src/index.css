@@ -10,6 +10,17 @@
   font-style: normal; 
   font-weight: 600; 
 } 
+:root{
+  --color-dark-blue: #2a6cea;
+  --color-light-blue: #397dff;
+  --color-red: #F13636;
+  --color-dark-grey: #191C1F;
+  --color-500-grey: #5E646A;
+  --color-400-grey: #83898F;
+  --color-300-grey: #C2C8CD;
+  --color-200-grey: #ECEFF2;
+  --color-100-grey: #F6F8FA;
+}
 *{
   margin: 0;
   padding: 0;
@@ -29,31 +40,16 @@ body{
   font-size: 40px;
   line-height: 140%;
   text-align: center;
-  color: #191c1f;
+  color: var(--color-dark-grey);
 }
-.swiper__container{
-  position: relative;
+@media (max-width: 768px){
+  .title{
+    margin-bottom: 47px;
+  }
 }
-.swiper{
-  padding-bottom: 50px !important;
-}
-.swiper-slide{
-  width: 200px;
-}
-.swiper-button-left,
-.swiper-button-right{
-  position: absolute;
-  cursor: pointer;
-}
-.swiper-button-left:hover.swiper-button-left svg path,
-.swiper-button-right:hover.swiper-button-right svg path{
-  fill: #2A6CEA;
-}
-.swiper-button-left{
-  left:-60px;
-  top: 40%;
-}
-.swiper-button-right{
-  right:-60px;
-  top: 40%;
+@media (max-width: 375px){
+  .title{
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
 }

@@ -44,7 +44,7 @@ const BlockForm = () => {
           <div className="checkbox">
             <input className="checkbox__input" type="checkbox"  {...register("agreement", { required: true })} />
             <label>Cогласен, отказываюсь</label>
-            {errors.agreement && <p className="desc__error">Примите условия</p>}
+            {errors.agreement && <p className="desc__error-checkbox">Примите условия</p>}
           </div>
           <Button type="s">Отправить</Button>
         </form>

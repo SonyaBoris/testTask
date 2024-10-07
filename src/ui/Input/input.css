@@ -6,20 +6,20 @@
   width: 100%;
   padding: 15px;
   padding-bottom: 0;
-  border: 2px solid #f6f8fa;
+  border: 2px solid var(--color-100-grey);
   border-radius: 4px;
   font-size: 18px;
   line-height: 178%;
-  color: #191c1f;
+  color: var(--color-dark-grey);
 }
 .input{
-  background: #f6f8fa;
+  background: var(--color-100-grey);
 }
 .input__value{
   background-color: #fff;
 }
 .input__error{
-  border-color: red;
+  border-color: var(--color-red);
 }
 .input__icon{
   position: absolute;
@@ -32,24 +32,24 @@
   top: 10px;
   font-size: 18px;
   line-height: 178%;
-  color: #5e646a;
+  color: var(--color-500-grey);
   transition: transform .2s ease-in-out;
 }
 .input:focus ~ .label {
   transform: translateY(-10px); 
   font-size: 14px; 
-  color: #83898f;
+  color: var(--color-400-grey);
 }
 .label__filled{
   position: absolute;
   left: 15px;
   top: 5px;
   font-size: 14px; 
-  color: #83898f;
+  color: var(--color-400-grey);
 }
 .input:focus{
   outline: none;
 }
 .desc__error{
-  color: red;
+  color: var(--color-red);
 }
