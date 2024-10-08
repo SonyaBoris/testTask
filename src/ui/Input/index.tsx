@@ -3,12 +3,12 @@ import "./input.css"
 import CANCEL from "../../assets/images/cancel.png"
 import OK from "../../assets/images/check.png"
 import { UseFormRegister, FieldErrors } from "react-hook-form";
-import { TData } from "../../pages/BlockForm";
+import { TData } from "../../types/mocks";
 
 type Props = {
   register: UseFormRegister<TData>;
   errors: FieldErrors<TData>;
-  name: keyof TData;
+  name: string;
   label: string,
 }
 
@@ -16,7 +16,7 @@ const Input: FC<Props> = ({ register, errors, name, label }) => {
 
   const [value, setValue] = useState("");
 
-  const errorError = errors[name]
+  const errorError = errors[ name as keyof TData]
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)
@@ -27,7 +27,7 @@ const Input: FC<Props> = ({ register, errors, name, label }) => {
       <input
         type="text"
         className={errorError ? "input input__error" : (value ? "input__value" : "input")}
-        {...register(name,
+        {...register(name as keyof TData,
           {
             required: true,
             maxLength: 10
