@@ -1,5 +1,5 @@
 import THIRD from "../../assets/images/third.png"
-import Reviews from "./Reviews";
+import Reviews from "../../components/Reviews/Reviews";
 import "./third.css"
 
 const BlockThird = () => {

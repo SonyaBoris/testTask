@@ -1,16 +1,11 @@
 import OPEN from "../../assets/images/open.png"
 import CLOSE from "../../assets/images/close.png"
 import { FC, useState } from "react";
-import "./questions.css"
+import { TQuestion } from "../../types/mocks";
+import "./question.css"
 
 type Props = {
   question: TQuestion,
-}
-
-type TQuestion = {
-  id: number,
-  text: string,
-  desc: string,
 }
 
 const Question: FC<Props> = ({ question }) => {

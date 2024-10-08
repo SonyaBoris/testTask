@@ -1,10 +1,10 @@
 import { Element } from 'react-scroll';
 import Header from './components/Header';
-import BlockHowItWork from './components/BlockHowItWork';
-import BlockThird from './components/BlockThird';
-import BlockQuestionsAnswers from './components/BlockQuestionsAnswers';
-import BlockForm from './components/BlockForm';
-import BlockStart from './components/BlockStart';
+import BlockHowItWork from './pages/BlockHowItWork';
+import BlockThird from './pages/BlockThird';
+import BlockQuestionsAnswers from './pages/BlockQuestionsAnswers';
+import BlockForm from './pages/BlockForm';
+import BlockStart from './pages/BlockStart';
 import Footer from './components/Footer';
 
 const App = () => {

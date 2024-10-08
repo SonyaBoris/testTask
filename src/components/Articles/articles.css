@@ -1,0 +1,27 @@
+.articles{
+  padding: 70px 0;
+  background-color: var(--color-100-grey);
+}
+.articles__content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 37px;
+}
+.article__title{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 178%;
+  color: var(--color-dark-grey);
+}
+.article__text{
+  line-height: 175%;
+  color: var(--color-dark-grey);
+}
+@media (max-width: 768px){
+.articles{
+  padding: 57px 0;
+}
+.articles__content{
+  grid-template-columns: repeat(1,1fr);
+}
+}

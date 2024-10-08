@@ -1,52 +1,24 @@
-import USER from "/user.png"
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import ReviewCard from '../ReviewCard/ReviewCard';
+import { fetchComments, selectAllComments } from "../../features/commentSlice";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../store";
+import "./reviews.css"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import ReviewCard from './ReviewCard';
 
 const Reviews = () => {
+  const dispatch = useAppDispatch();
+  const comments = useAppSelector(selectAllComments);
+  const commentStatus = useAppSelector((state) => state.comments.status);
 
-  const mockReviews = [
-    {
-      id: 1,
-      image: USER,
-      name: 'Константинов Михаил Павлович',
-      location: 'Санкт-Петербург',
-      text: "Каждый из нас."
-    },
-    {
-      id: 2,
-      image: USER,
-      name: 'Иван Иванов',
-      location: 'Санкт-Петербург',
-      text: "Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы упускаем, что активно развивающиеся страны третьего мира призваны к ответу.. Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы упускаем, что активно развивающиеся страны третьего мира призваны к ответу."
-    },
-    {
-      id: 3,
-      image: USER,
-      name: 'Константинов Артем Павлович',
-      location: 'Санкт-Петербург',
-      text: "Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы упускаем, что активно развивающиеся страны третьего мира призваны к ответу."
-    },
-    {
-      id: 4,
-      image: USER,
-      name: 'Иванов Михаил Павлович',
-      location: 'Санкт-Петербург',
-      text: "Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы упускаем, что активно развивающиеся страны третьего мира призваны к ответу."
-    },
-    {
-      id: 5,
-      image: USER,
-      name: 'Петров Михаил Павлович',
-      location: 'Санкт-Петербург',
-      text: "Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить"
-    },
-
-  ]
+  useEffect(() => {
+    if (commentStatus === 'idle') {
+      dispatch(fetchComments());
+    }
+  }, [commentStatus, dispatch]);
 
   return (
     <section className="reviews">
@@ -76,7 +48,7 @@ const Reviews = () => {
             }}
           >
             {
-              mockReviews.map(user =>
+              comments.map(user =>
                 <SwiperSlide key={user.id}>
                   <ReviewCard user={user} />
                 </SwiperSlide>

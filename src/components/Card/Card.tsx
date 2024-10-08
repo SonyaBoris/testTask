@@ -1,15 +1,9 @@
 import { FC } from "react";
-import "./howItWork.css"
+import { TCard } from "../../types/mocks";
+import "./card.css"
 
 type Props = {
   card: TCard
-}
-
-type TCard = {
-  id: number,
-  image: string,
-  text: string,
-  desc: string,
 }
 
 const Card: FC<Props> = ({ card }) => {

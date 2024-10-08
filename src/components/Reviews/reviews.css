@@ -1,0 +1,41 @@
+.reviews{
+  padding: 57px 0;
+  background-color: var(--color-100-grey);
+}
+.swiper__container{
+  position: relative;
+}
+.swiper{
+  padding-bottom: 50px !important;
+}
+.swiper-slide{
+  width: 200px;
+}
+.swiper-button-left,
+.swiper-button-right{
+  position: absolute;
+  cursor: pointer;
+}
+.swiper-button-left:hover.swiper-button-left svg path,
+.swiper-button-right:hover.swiper-button-right svg path{
+  fill: #2A6CEA;
+}
+.swiper-button-left{
+  left:-60px;
+  top: 40%;
+}
+.swiper-button-right{
+  right:-60px;
+  top: 40%;
+}
+@media (max-width: 1300px){
+  .swiper-button-left,
+  .swiper-button-right{
+    display: none;
+}
+}
+@media (max-width: 768px){
+  .reviews{
+    padding: 33px 0;
+  }
+}

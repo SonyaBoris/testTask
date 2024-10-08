@@ -3,7 +3,7 @@ import "./input.css"
 import CANCEL from "../../assets/images/cancel.png"
 import OK from "../../assets/images/check.png"
 import { UseFormRegister, FieldErrors } from "react-hook-form";
-import { TData } from "../../components/BlockForm";
+import { TData } from "../../pages/BlockForm";
 
 type Props = {
   register: UseFormRegister<TData>;

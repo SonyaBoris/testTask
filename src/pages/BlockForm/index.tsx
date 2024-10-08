@@ -2,12 +2,7 @@ import Input from "../../ui/Input";
 import Button from "../../ui/Button";
 import "./form.css"
 import { useForm } from "react-hook-form"
-
-export type TData = {
-  name: string,
-  tel: string,
-  agreement: boolean,
-}
+import { TData } from "../../types/mocks";
 
 const BlockForm = () => {
   const {
