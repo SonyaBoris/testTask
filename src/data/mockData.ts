@@ -1,7 +1,7 @@
-import WAITING from "/test-task/waiting.png"
-import DELIVERY from "/test-task/delivery-truck.png"
-import SECURE from "/test-task/secure.png"
-import MONEY from "/test-task/money-bags.png"
+import WAITING from "/waiting.png"
+import DELIVERY from "/delivery-truck.png"
+import SECURE from "/secure.png"
+import MONEY from "/money-bags.png"
 
 export const mockQuestions = [
   {
