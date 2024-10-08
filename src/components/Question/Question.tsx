@@ -2,6 +2,8 @@ import OPEN from "../../assets/images/open.png"
 import CLOSE from "../../assets/images/close.png"
 import { FC, useState } from "react";
 import { TQuestion } from "../../types/mocks";
+import { motion } from "framer-motion"
+import { xmotionAnimate } from "../../ui/animate";
 import "./question.css"
 
 type Props = {
@@ -17,7 +19,9 @@ const Question: FC<Props> = ({ question }) => {
   }
 
   return (
-    <div className="question">
+    <motion.div    
+    variants={xmotionAnimate}
+    custom={question.id * .3}className="question">
       <div className="question__top" onClick={toggleClick}>
         <span className="question__top-title">{question.text}</span>
         <img src={`${open ? CLOSE : OPEN}`} alt="Иконка свернуть или развернуть подробности" />
@@ -27,7 +31,7 @@ const Question: FC<Props> = ({ question }) => {
           {question.desc}
         </div>
       }
-    </div>
+    </motion.div>
   );
 }
 

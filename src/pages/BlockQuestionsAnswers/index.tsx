@@ -1,6 +1,8 @@
 import Articles from "../../components/Articles/Articles" 
 import Question from "../../components/Question/Question"
 import { mockQuestions } from "../../data/mockData";
+import { motion } from "framer-motion"
+import { opacityAnimate } from '../../ui/animate';
 import "./questions.css"
 
 const BlockQuestionsAnswers = () => {
@@ -8,14 +10,21 @@ const BlockQuestionsAnswers = () => {
     <>
       <section className="questions">
         <div className="container">
-          <h2 className="title">Вопросы и ответы</h2>
-          <div>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          variants={opacityAnimate}
+          custom={.3}
+          className="title">Вопросы и ответы</motion.h2>
+          <motion.div
+           initial="hidden"
+           whileInView="visible">
             {
               mockQuestions.map(question =>
                 <Question key={question.id} question={question} />
               )
             }
-          </div>
+          </motion.div>
         </div>
       </section>
       <Articles />

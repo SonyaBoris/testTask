@@ -4,10 +4,13 @@ import ReviewCard from '../ReviewCard/ReviewCard';
 import { fetchComments, selectAllComments } from "../../features/commentSlice";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../store";
+import { motion } from "framer-motion"
+import { opacityAnimate } from '../../ui/animate';
 import "./reviews.css"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 
 const Reviews = () => {
   const dispatch = useAppDispatch();
@@ -23,7 +26,12 @@ const Reviews = () => {
   return (
     <section className="reviews">
       <div className="container">
-        <h2 className="title">Отзывы</h2>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          variants={opacityAnimate}
+          custom={.3}
+          className="title">Отзывы</motion.h2>
         <div className="swiper__container">
           <Swiper
             modules={[Navigation, Pagination, A11y]}

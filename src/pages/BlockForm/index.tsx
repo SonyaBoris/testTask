@@ -1,8 +1,10 @@
 import Input from "../../ui/Input";
 import Button from "../../ui/Button";
-import "./form.css"
 import { useForm } from "react-hook-form"
 import { TData } from "../../types/mocks";
+import { motion } from "framer-motion"
+import { opacityAnimate } from '../../ui/animate';
+import "./form.css"
 
 const BlockForm = () => {
   const {
@@ -26,7 +28,12 @@ const BlockForm = () => {
   return (
     <section className="block__form">
       <div className="container">
-        <h2 className="title">Отправь форму</h2>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          variants={opacityAnimate}
+          custom={.3}
+          className="title">Отправь форму</motion.h2>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           <Input errors={errors}
             register={register}
